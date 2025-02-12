@@ -21,8 +21,8 @@
     </title>
   </head>
   <body>
-    <main class="main card">
-      <div class="card-image">
+    <main id="main-container" class="main-container">
+      <picture id="header-img">
         <img
           src="./assets/images/illustration-sign-up-mobile.svg"
           class="mobile"
@@ -33,50 +33,61 @@
           class="desktop"
           alt=""
         />
-      </div>
-      <div class="card-body">
-        <div class="card-content">
-          <h1>Stay updated!</h1>
-          <h2>Join 60,000+ product managers receiving monthly updates on:</h2>
-          <ul>
-            <li>
-              <img src="./assets/images/icon-list.svg" alt="" />
-              <p>Product discovery and building what matters</p>
-            </li>
-            <li>
-              <img src="./assets/images/icon-list.svg" alt="" />
-              <p>Measuring to ensure updates are a success</p>
-            </li>
-            <li>
-              <img src="./assets/images/icon-list.svg" alt="" />
-              <p>And much more!</p>
-            </li>
-          </ul>
-          <form id="form" novalidate>
-            <div class="email-input">
-              <label for="email">Email address</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                placeholder="email@company.com"
-              />
-              <span aria-live="polite" id="email-error"></span>
-            </div>
-            <button>Subscribe to monthly newsletter</button>
-          </form>
-        </div>
-      </div>
+      </picture>
+      <section class="newsletter-content" id="sign-up">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>
+            <img src="./assets/images/icon-list.svg" alt="" />
+            <p>Product discovery and building what matters</p>
+          </li>
+          <li>
+            <img src="./assets/images/icon-list.svg" alt="" />
+            <p>Measuring to ensure updates are a success</p>
+          </li>
+          <li>
+            <img src="./assets/images/icon-list.svg" alt="" />
+            <p>And much more!</p>
+          </li>
+        </ul>
+        <form action="#" id="form" novalidate>
+          <div class="form-input">
+            <label for="email" class="email-label"
+              >Email address <span class="error-message"></span
+            ></label>
+            <span aria-live="polite" id="error">Valid Email Required</span>
+          </div>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="email@company.com"
+            class="email-input"
+          />
+          <button type="submit" class="btn" id="submit">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+        <!-- Sign-up form end -->
+      </section>
     </main>
+    <section id="contact-form-response" class="contact-form-response">
+      <!-- Success message start -->
+      <img src="./assets/images/icon-success.svg" alt="icon success" />
 
-    <!-- Sign-up form end -->
+      <h2>Thanks for subscribing!</h2>
 
-    <!-- Success message start -->
+      <p>
+        A confirmation email has been sent to
+        <strong id="email-response"></strong> Please open it and click the
+        button inside to confirm your subscription.
+      </p>
 
-    <!-- Thanks for subscribing! A confirmation email has been sent to
-    ash@loremcompany.com. Please open it and click the button inside to confirm
-    your subscription. Dismiss message -->
-
+      <button id="reset-button">Dismiss Message</button>
+    </section>
     <!-- Success message end -->
+
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
