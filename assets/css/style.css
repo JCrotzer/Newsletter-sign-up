@@ -32,7 +32,6 @@ body {
   display: flex;
   flex-direction: column;
   background: var(--white);
-  max-width: 700px;
   padding-bottom: 30px;
 }
 
@@ -167,14 +166,22 @@ ul li {
   }
 
   .desktop {
-    width: 300px;
+    width: 400px;
+    height: 593px;
   }
 
   #main-container {
+    width: 75%;
+    height: 641px;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
     border-radius: 15px;
     padding: 10px 20px;
+  }
+
+  .newsletter-content {
+    width: 400px;
+    height: 593px;
   }
 }
